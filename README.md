@@ -1,3 +1,7 @@
+<h1 align="center">
+:crossed_swords:<br>SEI LÁ CRAFT
+</h1>
 
-## SEI LA CRAFT
+## ☕ Seja um dos colaboradores do server
 
+Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.<br>
