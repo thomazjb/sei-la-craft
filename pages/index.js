@@ -9,9 +9,7 @@ export default function Home() {
         <title>SEI LÁ CRAFT</title>
         <meta name="description" content="Seu servidor preferido de minecraft" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
-</link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
       </Head>
 
       <main className={styles.main}>
