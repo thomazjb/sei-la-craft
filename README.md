@@ -4,4 +4,4 @@
 
 ## ☕ Seja um dos colaboradores do server
 
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.<br>
+Quer fazer parte desse projeto? Clique [AQUI](README.md) e leia como contribuir.<br>
