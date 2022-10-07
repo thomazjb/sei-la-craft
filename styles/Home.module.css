@@ -46,6 +46,31 @@
   animation: imageAnimation 3s linear infinite 0s;
 }
 
+.pix {
+  margin: 0 0 0 0;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 2rem;
+  /* color: ; */
+  background-color: seagreen;
+  border-radius: 10px;
+  padding: 5px;
+  border: 3px solid seagreen;
+  /* animation: imageAnimation 3s linear infinite 0s; */
+}
+.pixcontainer {
+  text-align: center;
+  background-color: lightseagreen;
+  margin: 0 0 40px 0;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: #111;
+  padding: 10px;
+  box-shadow: 6px 6px 44px -14px rgba(0,0,0,0.51);
+  
+}
+
+
 .title,
 .description {
   text-align: center;
@@ -96,6 +121,7 @@
 }
 
 .grid a:hover {
+  box-shadow: 6px 6px 44px -14px rgba(0,0,0,0.51);
   background: darkseagreen;
 }
 
@@ -213,7 +239,7 @@ content:'\f1cb';
     border-color: #222;
   }
   .code {
-   background: #111;
+   background: seagreen;
   }
   .logo img {
     filter: invert(1);

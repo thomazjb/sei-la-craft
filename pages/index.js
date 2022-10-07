@@ -16,17 +16,25 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Pumpkin></Pumpkin>
+        {/* <Pumpkin></Pumpkin> */}
         <h1 className={styles.title}>
           Bem-vindo ao <a href="#">sei-la</a>!
-
         </h1>
 
         <p className={styles.description}>
          Você pode jogar conosco em: {' '}
           <code className={styles.code}>mine.sei-la.co:10074</code>
         </p>
-
+        <div className={styles.pixcontainer}>
+            <h1 className={styles.pix}><strong >Faça um PIX! </strong></h1>
+            <p>
+              Ajude a manter o nosso servidor!
+              <br></br>Receba itens a cada R$ 2,00 doado.
+              <br></br>
+              <br></br>
+              <strong >Chave: 09143280935 </strong>
+            </p>
+        </div>
         <div className={styles.grid}>
           <div>
             <a href="#"><span>Facebook</span></a>
