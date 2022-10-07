@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Counter from './components/Counter'
+import Pumpkin from './components/Pumpkin'
 
 export default function Home() {
-  return (  
+  return ( 
     <div className={styles.container}>
+
       <Head>
         <title>SEI LÁ CRAFT</title>
         <meta name="description" content="Seu servidor preferido de minecraft" />
@@ -13,8 +16,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Pumpkin></Pumpkin>
         <h1 className={styles.title}>
           Bem-vindo ao <a href="#">sei-la</a>!
+
         </h1>
 
         <p className={styles.description}>
@@ -22,17 +27,17 @@ export default function Home() {
           <code className={styles.code}>mine.sei-la.co:10074</code>
         </p>
 
-        
         <div className={styles.grid}>
-        <div>
+          <div>
             <a href="#"><span>Facebook</span></a>
             <a href="#"><span>Twitter</span></a>
             <a href="https://discord.gg/tHpkj323"><span>Discord</span></a>
             <a href="#"><span>Github</span></a>
           </div>
         </div>
-      </main>
 
+        {/* <Counter users={['Thomaz', 'Bruno']}></Counter> */}
+      </main>
 
     </div>
   )
