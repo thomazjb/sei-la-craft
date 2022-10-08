@@ -6,6 +6,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: url("/back-3.jpg");
   color: white;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/back-3.jpg");
 }
 
 a {
@@ -15,17 +18,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background-position: center;
-    background-size: cover;
-    background-image: url("/back-3.jpg");
-
-  }
 }
