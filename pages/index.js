@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Counter from './components/Counter'
+import OnlinePlayers from './components/OnlinePlayers'
 import Pumpkin from './components/Pumpkin'
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
          Você pode jogar conosco em: {' '}
           <code className={styles.code}>mine.sei-la.co:10074</code>
         </p>
-        {/* <div className={styles.pixcontainer}>
+        <div className={styles.pixcontainer}>
             <h1 className={styles.pix}><strong >Faça um PIX! </strong></h1>
             <p>
               Ajude a manter o nosso servidor!
@@ -34,7 +34,7 @@ export default function Home() {
               <br></br>
               <strong >Chave: 09143280935 </strong>
             </p>
-        </div> */}
+        </div>
         <div className={styles.grid}>
           <div>
             <a href="#"><span>Facebook</span></a>
@@ -43,8 +43,10 @@ export default function Home() {
             <a href="#"><span>Github</span></a>
           </div>
         </div>
-
-        {/* <Counter></Counter> */}
+        <div>
+        <OnlinePlayers></OnlinePlayers>
+        </div>
+        
       </main>
 
     </div>
