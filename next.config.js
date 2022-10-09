@@ -5,6 +5,16 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
+  async headers() {
+    return [
+      {
+        source: "/_next/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "http://example.com" },
+        ],
+      },
+    ]
+  },
   output: 'standalone'
 }
 

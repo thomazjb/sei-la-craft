@@ -10,7 +10,6 @@ export default function Home() {
 
       <Head>
         <title>SEI LÁ CRAFT</title>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         <meta name="description" content="Seu servidor preferido de minecraft" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
