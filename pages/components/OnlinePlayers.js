@@ -13,6 +13,7 @@ const OnlinePlayers = () => {
                 key: '5mGj1i87F46eDF60tz',
                 Accept: 'application/json',
               },
+              referrerPolicy: "unsafe_url" 
             })
         .then((res) => res.json())
         .then((data) => {
