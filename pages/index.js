@@ -10,6 +10,7 @@ export default function Home() {
 
       <Head>
         <title>SEI LÁ CRAFT</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         <meta name="description" content="Seu servidor preferido de minecraft" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
@@ -22,7 +23,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-         Você pode jogar conosco em: {' '}
+          Você pode jogar conosco em: {' '}
           <code className={styles.code}>mine.sei-la.co:10074</code>
         </p>
         {/* <div className={styles.pixcontainer}>
@@ -36,8 +37,9 @@ export default function Home() {
             </p>
         </div> */}
         <div>
-        <OnlinePlayers></OnlinePlayers>
+          <OnlinePlayers></OnlinePlayers>
         </div>
+
         <div className={styles.grid}>
           <div>
             <a href="#"><span>Facebook</span></a>
