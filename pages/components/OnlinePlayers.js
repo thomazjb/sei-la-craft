@@ -8,7 +8,7 @@ const OnlinePlayers = () => {
   
     useEffect(() => {
       setLoading(true);
-      fetch('http://190.115.197.215:10075/v1/players', {
+      fetch('/api/players', {
               headers: {
                 key: '5mGj1i87F46eDF60tz',
                 Accept: 'application/json',
