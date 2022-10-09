@@ -4,18 +4,16 @@ $lightbasecolor: lightseagreen;
 $darkbasecolor: seagreen; 
 
 .leaderboard {
-  transform: translate(-50%, -50%);
+  // transform: translate(-50%, -50%);
   width: 285px;
-  position:absolute;
-  right: -8vw;
-  top: 50%;
-
+  position:relative;
   background: linear-gradient(to bottom, $darkbasecolor, $lightbasecolor);
   border-radius: 10px;
   box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
 
   h1 {
     font-size: 18px;
+    padding-top: 10px;
     color: #e1e1e1;
     text-align: center;
 

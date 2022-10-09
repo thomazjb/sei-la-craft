@@ -25,7 +25,7 @@ export default function Home() {
          Você pode jogar conosco em: {' '}
           <code className={styles.code}>mine.sei-la.co:10074</code>
         </p>
-        <div className={styles.pixcontainer}>
+        {/* <div className={styles.pixcontainer}>
             <h1 className={styles.pix}><strong >Faça um PIX! </strong></h1>
             <p>
               Ajude a manter o nosso servidor!
@@ -34,6 +34,9 @@ export default function Home() {
               <br></br>
               <strong >Chave: 09143280935 </strong>
             </p>
+        </div> */}
+        <div>
+        <OnlinePlayers></OnlinePlayers>
         </div>
         <div className={styles.grid}>
           <div>
@@ -42,9 +45,6 @@ export default function Home() {
             <a href="https://discord.gg/tHpkj323"><span>Discord</span></a>
             <a href="#"><span>Github</span></a>
           </div>
-        </div>
-        <div>
-        <OnlinePlayers></OnlinePlayers>
         </div>
         
       </main>
