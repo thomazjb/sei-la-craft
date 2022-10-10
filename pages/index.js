@@ -1,40 +1,33 @@
+import { Html } from 'next/document'
 import Head from 'next/head'
-import Image from 'next/image'
+import { Heading, Text } from '@chakra-ui/react'
+
+import { ColorModeScript } from '@chakra-ui/react'
 import styles from '../styles/Home.module.css'
 import OnlinePlayers from './components/OnlinePlayers'
 import Pumpkin from './components/Pumpkin'
 
 export default function Home() {
   return ( 
+  
     <div className={styles.container}>
+    <ColorModeScript initialColorMode='Dark' />
 
-      <Head>
-        <title>SEI LÁ CRAFT</title>
-        <meta name="description" content="Seu servidor preferido de minecraft" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
-      </Head>
+    <Head>
+      <title>SEI LÁ CRAFT</title>
+      <meta name="description" content="Seu servidor preferido de minecraft" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+    </Head>
 
       <main className={styles.main}>
         {/* <Pumpkin></Pumpkin> */}
-        <h1 className={styles.title}>
-          Bem-vindo ao <a href="#">sei-la</a>!
-        </h1>
+        <Heading as='h2' size='4xl' className={styles.title}>Bem-vindo ao <a href="#">sei-la</a>!</Heading>
 
-        <p className={styles.description}>
-          Você pode jogar conosco em: {' '}
+        <Text fontSize='xl' as='b' className={styles.description}>
+            Você pode jogar conosco em: {' '}
           <code className={styles.code}>mine.sei-la.co:10074</code>
-        </p>
-        {/* <div className={styles.pixcontainer}>
-            <h1 className={styles.pix}><strong >Faça um PIX! </strong></h1>
-            <p>
-              Ajude a manter o nosso servidor!
-              <br></br>Receba itens a cada R$ 2,00 doado.
-              <br></br>
-              <br></br>
-              <strong >Chave: 09143280935 </strong>
-            </p>
-        </div> */}
+        </Text>
         <div>
           <OnlinePlayers></OnlinePlayers>
         </div>
@@ -51,5 +44,7 @@ export default function Home() {
       </main>
 
     </div>
+
+   
   )
 }

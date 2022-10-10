@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from '/styles/OnlinePlayers.module.scss'
+import { Spinner, Heading, Center, Text } from '@chakra-ui/react'
 import {React, Image} from "react";
 
 const OnlinePlayers = () => {
@@ -24,20 +25,23 @@ const OnlinePlayers = () => {
         .catch((error) => {});
     },[]);
   
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Spinner
+    thickness='4px'
+    speed='0.65s'
+    color='teal.500'
+    size='xl'
+  />;
 
     if (data) {
       return (
         <div className={styles.leaderboard}>
-          <h1>
-            Players Online
-          </h1>
+          <Heading as='h3' size='1xl'> <Center h='40px'>Players Online</Center></Heading>
           <ol>
             {
             data.map((user) => (
               <li key={user.uuid}>
-              <mark>{ user.displayName }</mark>
-              <small>{(user.op == true) ? 'Admin' : 'Vip' }</small>
+              <mark><Text as='b'>{ user.displayName }</Text></mark>
+              <small><Text as='b' color='teal.100'>{(user.op == true) ? 'ADMIN' : 'VIP' }</Text></small>
               </li>
             ))
             }

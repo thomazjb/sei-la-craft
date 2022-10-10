@@ -1,13 +1,13 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0!important;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-image: url("/back-3.jpg");
-  color: white;
-  background-position: center;
-  background-size: cover;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+  background-image: url("/back-3.jpg") !important;;
+  color: white !important;
+  background-position: center !important;
+  background-size: cover !important;
   background-image: url("/back-3.jpg");
 }
 
@@ -17,5 +17,5 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
