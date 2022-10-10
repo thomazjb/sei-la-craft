@@ -17,11 +17,12 @@ const OnlinePlayers = () => {
             })
         .then((res) => res.json())
         .then((data) => {
-          setData(data);
+          if(data) setData(data);
+          if(data.length <= 0) setData(false);
           setLoading(false);
         })
         .catch((error) => {});
-    }, []);
+    },[]);
   
     if (isLoading) return <p>Loading...</p>;
 
@@ -35,10 +36,9 @@ const OnlinePlayers = () => {
             {
             data.map((user) => (
               <li key={user.uuid}>
-              <mark>{user.displayName || 'Não há players online' }</mark>
+              <mark>{ user.displayName }</mark>
               <small>{(user.op == true) ? 'Admin' : 'Vip' }</small>
               </li>
-           
             ))
             }
           </ol>
