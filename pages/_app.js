@@ -12,9 +12,9 @@ export default function MyApp({
   return (
     <SessionProvider session={session}>
     <ChakraProvider theme={customTheme}>
-      {/* <Wrapper> */}
+      <Wrapper>
         <Component {...pageProps} />
-      {/* </Wrapper> */}
+      </Wrapper>
     </ChakraProvider>
   </SessionProvider>
   )
