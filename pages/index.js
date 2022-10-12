@@ -1,17 +1,27 @@
-import { Html } from 'next/document'
+import Link from 'next/link'
 import Head from 'next/head'
-import { Heading, Text } from '@chakra-ui/react'
-
-import { ColorModeScript } from '@chakra-ui/react'
+import { Flex, Spacer, ButtonGroup, Heading, Text, Button } from '@chakra-ui/react'
+import { FaPlusSquare, FaUser } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 import OnlinePlayers from './components/OnlinePlayers'
 import Pumpkin from './components/Pumpkin'
 
 export default function Home() {
   return ( 
+
+<div className={styles.container}>
   
-    <div className={styles.container}>
-    <ColorModeScript initialColorMode='Dark' />
+  <Flex minWidth='max-content' alignItems='center' gap='2' h='20' >
+        <Spacer />
+        <ButtonGroup gap='2'>
+        <Link href="/register">
+          <Button leftIcon={<FaPlusSquare />} colorScheme='teal'>Registre-se</Button>
+        </Link>
+        <Link href="/login">
+          <Button leftIcon={<FaUser/>} colorScheme='teal'>Log in</Button>
+        </Link>
+    </ButtonGroup>
+  </Flex>
 
     <Head>
       <title>SEI LÁ CRAFT</title>

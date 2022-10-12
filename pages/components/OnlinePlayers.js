@@ -25,12 +25,7 @@ const OnlinePlayers = () => {
         .catch((error) => {});
     },[]);
   
-    if (isLoading) return <Spinner
-    thickness='4px'
-    speed='0.65s'
-    color='teal.500'
-    size='xl'
-  />;
+    if (isLoading) return <Spinner thickness='4px' speed='0.65s' color='teal.500' size='xl' />;
 
     if (data) {
       return (
