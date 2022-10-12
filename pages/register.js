@@ -46,14 +46,7 @@ const Register = () => {
         password: password
     }
     
-    await fetch('/api/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    
+    await axios.post('/api/register', data);
     signIn("credentials", {
         username, password, callbackUrl: `${window.location.origin}/dashboard`, redirect: false }
     ).then(function(result) {
