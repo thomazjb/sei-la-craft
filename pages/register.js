@@ -45,8 +45,15 @@ const Register = () => {
         email: email,
         password: password
     }
+
+    let axiosConfig = {
+      headers: {
+          'Content-Type': 'application/json;charset=UTF-8',
+          "Access-Control-Allow-Origin": "*",
+      }
+    };
     
-    await axios.post('/api/register', data);
+    await axios.post('/api/register', data, axiosConfig);
     signIn("credentials", {
         username, password, callbackUrl: `${window.location.origin}/dashboard`, redirect: false }
     ).then(function(result) {
