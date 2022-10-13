@@ -74,6 +74,7 @@ const configuration = {
             }
         }),
     ],
+    secret: process.env.NEXT_PUBLIC_SECRET,
     callbacks: {
         async signIn(user, account, profile) {
             try
