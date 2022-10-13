@@ -9,9 +9,9 @@ export default function Wrapper(props)
     const { data: session, status } = useSession()
     const router = useRouter();
 
-    // if (status === "loading") {
-    //     return <p>Loading...</p>
-    //   }
+    if (status === "loading") {
+        return <p>Loading...</p>
+      }
     
     if ((session !== null && status === "authenticated") || (router.pathname === "/" || router.pathname === '/register' || router.pathname === '/login'))
     {

@@ -16,8 +16,6 @@ const confirmPasswordHash = (plainPassword, hashedPassword) => {
 }
 
 const configuration = {
-    debug: true,
-    site: process.env.NEXTAUTH_URL,
     cookie: {
         secure: process.env.NODE_ENV && process.env.NODE_ENV === 'production',
     },
