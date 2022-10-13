@@ -12,13 +12,13 @@ export default function MyApp({
     console.log("Got Session: ", session);
   }
   return (
-    <SessionProvider session={session}>
     <ChakraProvider theme={customTheme}>
-      <Wrapper>
+    <SessionProvider session={session}>
+      {/* <Wrapper> */}
         <Component {...pageProps} />
-      </Wrapper>
-    </ChakraProvider>
+      {/* </Wrapper> */}
   </SessionProvider>
+  </ChakraProvider>
   )
 }
 

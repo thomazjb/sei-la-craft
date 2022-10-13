@@ -22,6 +22,9 @@ const configuration = {
     session: {
         jwt: true,
         maxAge: 30 * 24 * 60 * 60, 
+        generateSessionToken: () => {
+            return randomUUID?.() ?? randomBytes(32).toString("hex")
+        }
     },
     providers: [
         CredentialsProvider({
@@ -71,7 +74,6 @@ const configuration = {
             }
         }),
     ],
-    secret: process.env.NEXT_PUBLIC_SECRET,
     callbacks: {
         async signIn(user, account, profile) {
             try
@@ -128,11 +130,13 @@ const configuration = {
         },
         jwt: async ({ token, user }) => {
             user && (token.user = user)
-            return token;
+            return Promise.resolve(token);
         },
-        session: async ({ session, token }) => {
-            session.user = token.user
-            return session;
+        session: async ({ session, token, user }) => {
+            session.accessToken = token.accessToken
+            session.user.id = token.id
+    
+            return Promise.resolve(session)
         }
     }
 }
