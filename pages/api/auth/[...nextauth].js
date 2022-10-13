@@ -21,10 +21,7 @@ const configuration = {
     },
     session: {
         jwt: true,
-        //strategy: "jwt",
         maxAge: 30 * 24 * 60 * 60, 
-        updateAge: 24 * 60 * 60, 
-          
     },
     providers: [
         CredentialsProvider({
@@ -129,36 +126,13 @@ const configuration = {
             }
 
         },
-        async session(session, token) {
-            if (userAccount !== null)
-            {
-                //session.user = userAccount;
-                session.user = {
-                    userId: userAccount.userId,
-                    name: userAccount.name,
-                    username: userAccount.username,
-                    email: userAccount.email
-                }
-
-            }
-            else if (typeof token.user !== typeof undefined && (typeof session.user === typeof undefined
-                || (typeof session.user !== typeof undefined && typeof session.user.userId === typeof undefined)))
-            {
-                session.user = token.user;
-            }
-            else if (typeof token !== typeof undefined)
-            {
-                session.token = token;
-            }
-            return session;
+        jwt: async ({ token, user }) => {
+            user && (token.user = user)
+            return token;
         },
-        async jwt(token, account, profile, isNewUser) {
-            console.log("JWT callback. Got User: ", account);
-            if (account) {
-                token.accessToken = account.access_token
-                token.id = profile.id
-              }
-              return token
+        session: async ({ session, token }) => {
+            session.user = token.user
+            return session;
         }
     }
 }

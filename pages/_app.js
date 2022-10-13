@@ -8,7 +8,9 @@ export default function MyApp({
   Component,
   pageProps: { session, ...pageProps },
 }) {
-  console.log("Got Session: ", session);
+  if(session){
+    console.log("Got Session: ", session);
+  }
   return (
     <SessionProvider session={session}>
     <ChakraProvider theme={customTheme}>
