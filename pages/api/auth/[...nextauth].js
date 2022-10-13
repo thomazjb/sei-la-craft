@@ -128,6 +128,7 @@ const configuration = {
             }
 
         },
+        secret: process.env.NEXT_PUBLIC_SECRET,
         jwt: async ({ token, user }) => {
             user && (token.user = user)
             return Promise.resolve(token);
