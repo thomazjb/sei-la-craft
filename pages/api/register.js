@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 export default async (req, res) => {
     if (req.method === "POST")
