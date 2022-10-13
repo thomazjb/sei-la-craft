@@ -74,7 +74,7 @@ const configuration = {
             }
         }),
     ],
-    secret: process.env.NEXT_PUBLIC_SECRET,
+    secret: 'bk3QTjo5edGByvogjqRSldyPJ568lhk1pfiniS4y56I=',
     callbacks: {
         async signIn(user, account, profile) {
             try
