@@ -5,33 +5,13 @@ import { FaPlusSquare, FaUser } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 import OnlinePlayers from './components/OnlinePlayers'
 import Pumpkin from './components/Pumpkin'
-import { getSession } from 'next-auth/react';
-
-export async function getServerSideProps(context) {
-  // THIS CAUSES THE ERROR
-  const session = await getSession(context);
-
-  if (session) {
-    return {
-      redirect: {
-        destination: '/dashboard',
-        permanent: false,
-      },
-    }
-  }
-  console.log('SESSION', session);
-
-  return {
-    props: {}
-  }
-}
 
 export default function Home() {
   return ( 
 
 <div className={styles.container}>
   
-  <Flex minWidth='max-content' alignItems='center' gap='2' h='20' >
+  <Flex minWidth='max-content' alignItems='center' gap='2' h='20'>
         <Spacer />
         <ButtonGroup gap='2'>
         <Link href="/register">
