@@ -133,12 +133,12 @@ const configuration = {
             user && (token.user = user)
             return Promise.resolve(token);
         },
-        session: async ({ session, token, user }) => {
-            session.accessToken = token.accessToken
-            session.user.id = token.id
+        // session: async ({ session, token, user }) => {
+        //     session.accessToken = token.accessToken
+        //     session.user.id = token.id
     
-            return Promise.resolve(session)
-        }
+        //     return Promise.resolve(session)
+        // }
     }
 }
 export default (req, res) => NextAuth(req, res, configuration)

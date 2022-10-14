@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar"
 import React from "react"
+import { useSession } from "next-auth/react"
 
 import { Flex, Heading, Text } from "@chakra-ui/react"
 
 export default function Dashboard() {
-
-
+  const { data: session } = useSession()
   return (
     <div >
       <Navbar />
@@ -47,3 +47,5 @@ export default function Dashboard() {
 
 
 }
+
+Dashboard.auth = true

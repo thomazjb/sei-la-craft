@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import { ChakraProvider } from '@chakra-ui/react'
 import { SessionProvider } from "next-auth/react"
-import Wrapper from "./components/Wrapper";
+import { useSession } from "next-auth/react"
 import customTheme from '../styles/theme';
 
 export default function MyApp({
@@ -13,12 +13,26 @@ export default function MyApp({
   }
   return (
     <ChakraProvider theme={customTheme}>
-    <SessionProvider session={session}>
-      {/* <Wrapper> */}
-        <Component {...pageProps} />
-      {/* </Wrapper> */}
-  </SessionProvider>
+      <SessionProvider session={session}>
+          {Component.auth ? (
+            <Auth>
+              <Component {...pageProps} />
+            </Auth>
+          ) : (
+            <Component {...pageProps} />
+          )}
+        </SessionProvider>
   </ChakraProvider>
   )
 }
 
+function Auth({ children }) {
+
+  const { status } = useSession({ required: true })
+
+  if (status === "loading") {
+    return <div>Loading...</div>
+  }
+
+  return children
+}
