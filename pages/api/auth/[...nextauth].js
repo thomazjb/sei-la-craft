@@ -16,16 +16,10 @@ const confirmPasswordHash = (plainPassword, hashedPassword) => {
 }
 
 const configuration = {
-    cookie: {
-        secure: process.env.NODE_ENV && process.env.NODE_ENV === 'production',
-    },
-    session: {
-        jwt: true,
-        maxAge: 30 * 24 * 60 * 60, 
-        generateSessionToken: () => {
-            return randomUUID?.() ?? randomBytes(32).toString("hex")
-        }
-    },
+    pages: {
+        signIn: '/login',
+        newUser: '/register'
+      },
     providers: [
         CredentialsProvider({
             id: "credentials",
@@ -39,7 +33,7 @@ const configuration = {
                             username: credentials.username
                         }
                     });
-                   // console.log(user);
+                
                     if (user !== null)
                     {
                         //Compare the hash
@@ -129,16 +123,6 @@ const configuration = {
 
         },
         secret: process.env.NEXT_PUBLIC_SECRET,
-        jwt: async ({ token, user }) => {
-            user && (token.user = user)
-            return Promise.resolve(token);
-        },
-        // session: async ({ session, token, user }) => {
-        //     session.accessToken = token.accessToken
-        //     session.user.id = token.id
-    
-        //     return Promise.resolve(session)
-        // }
     }
 }
 export default (req, res) => NextAuth(req, res, configuration)
